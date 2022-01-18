@@ -1,0 +1,57 @@
+{{> header }}
+<div class="container">
+    <div class="row">
+        <div class="col-1 mx-auto mt-5 "></div>
+<div class="col-7 mx-auto mt-5 ">
+
+   
+
+   {{#each list}}
+    <div class="row pt-5" style="display: flex;" >
+        
+        <h4 class="col-9">{{title}} </h4>
+        <p class="col-3 " style="align-self: flex-end; font-size:x-small; color:gray">{{Ftime date}}</p>
+        
+        <p class=" border-top"  id="content">{{length body}}</p>
+       
+        <a class="btn btn-primary ml-auto " href="/post/{{_id}}" >Read More</a>
+    </div>
+    {{/each}}
+     <div class="row pt-5 mx-auto" style="display: flex;" >
+      <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    {{#each nums}}
+    <li class="page-item mx-1"><a class="page-link" href="/number/{{this}}">{{this}}</a></li>
+    {{/each}}
+    
+  </ul>
+</nav>
+     </div>
+    
+</div>
+<div class="col-1 mx-auto mt-5 "></div>
+<div class="col-3 mx-auto mt-5 ">
+  <div class="row">
+    <div class="card" >
+  
+  <div class="card-body">
+    <h5 class="card-title">Nablus TEMP</h5>
+    <p class="card-text">{{temp}}°C</p>
+    
+  </div>
+</div>
+</div>
+ <div class="row pt-5">
+    <div class="card" >
+  
+  <div class="card-body">
+    <h5 class="card-title">BTC to Gold</h5>
+    <p class="card-text">rate: {{rate}}<br>Right Now</p>
+    
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+{{> footer }}
